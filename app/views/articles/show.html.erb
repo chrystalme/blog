@@ -2,4 +2,8 @@
 
 <p><%= @article.body %></p>
 
-<a href="/">Go Back</a>
+
+<ul>
+<li><a href="/">Go Back</a></li>
+  <li><%= link_to "Edit", edit_article_path(@article) %></li>
+</ul>
