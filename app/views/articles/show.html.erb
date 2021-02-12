@@ -2,8 +2,9 @@
 
 <p><%= @article.body %></p>
 
-
 <ul>
-<li><a href="/">Go Back</a></li>
+  <li><a href="/">Go Back</a></li>
   <li><%= link_to "Edit", edit_article_path(@article) %></li>
+  <li><%= link_to "Destroy", article_path(@article),
+                  method: :delete %></li>
 </ul>
