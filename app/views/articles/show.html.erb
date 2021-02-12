@@ -3,8 +3,16 @@
 <p><%= @article.body %></p>
 
 <ul>
-  <li><a href="/">Go Back</a></li>
   <li><%= link_to "Edit", edit_article_path(@article) %></li>
   <li><%= link_to "Destroy", article_path(@article),
-                  method: :delete %></li>
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+                  <li><a href="/">Go Back</a></li>
 </ul>
+
+<h2>Comments</h2>
+<%= render @article.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+  
